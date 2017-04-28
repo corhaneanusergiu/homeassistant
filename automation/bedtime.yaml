@@ -30,11 +30,20 @@
     - service: light.turn_off
       entity_id: group.outdoor_lighting
     - service: switch.turn_off
-      entity_id: switch.air_purifier, switch.hallway_fan, switch.lower_backyard_outdoor_lighting, switch.lower_patio_outdoor_lighting, switch.fireplace
+      entity_id:
+        - switch.air_purifier
+        - switch.hallway_fan
+        - switch.lower_backyard_outdoor_lighting
+        - switch.lower_patio_outdoor_lighting
+        - switch.fireplace
     - service: cover.close_cover
       entity_id: cover.garage_door
     - service: homeassistant.turn_off
-      entity_id: input_boolean.interior_holiday, input_boolean.office_rainbow, input_boolean.livingroom_rainbow, input_boolean.front_porch_rainbow
+      entity_id:
+        - input_boolean.interior_holiday
+        - input_boolean.office_rainbow
+        - input_boolean.livingroom_rainbow
+        - input_boolean.front_porch_rainbow
     - service: input_select.select_option
       data:
         entity_id: input_select.remote
@@ -82,11 +91,20 @@
     - service: light.turn_off
       entity_id: group.outdoor_lighting
     - service: switch.turn_off
-      entity_id: switch.air_purifier, switch.lower_backyard_outdoor_lighting, switch.lower_patio_outdoor_lighting, switch.fireplace
+      entity_id:
+        - switch.air_purifier
+        - switch.hallway_fan
+        - switch.lower_backyard_outdoor_lighting
+        - switch.lower_patio_outdoor_lighting
+        - switch.fireplace
     - service: cover.close_cover
       entity_id: cover.garage_door
     - service: homeassistant.turn_off
-      entity_id: input_boolean.interior_holiday, input_boolean.office_rainbow, input_boolean.livingroom_rainbow, input_boolean.front_porch_rainbow
+      entity_id:
+        - input_boolean.interior_holiday
+        - input_boolean.office_rainbow
+        - input_boolean.livingroom_rainbow
+        - input_boolean.front_porch_rainbow
     - service: input_select.select_option
       data:
         entity_id: input_select.remote
@@ -104,7 +122,7 @@
     - service: climate.set_hold_mode
       data:
         entity_id: climate.main_floor
-        hold_mode: smart3
+        hold_mode: "smart3"
 
         ##########################################################
         ## Bedtime Before 11:30p
@@ -135,7 +153,7 @@
     - service: climate.set_hold_mode
       data:
         entity_id: climate.main_floor
-        hold_mode: sleep
+        hold_mode: "sleep"
 
         ##########################################################
         ## Bedtime after Midnight
